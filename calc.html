@@ -1,13 +1,33 @@
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Calculator</title>
             <style>
-                input, button {
+                input {
                     /*  Тут можно написать комментарий */
                     width: 160px;
                     margin: 10px;
                     text-align: center;
                 }
+                button {
+                    width: 70px;  
+                }
+
+                .calculator {
+                    border: solid rgb(61, 90, 114);
+                    width: 180px;
+                    padding: 10px;
+                    text-align: center;
+                    background-color: lightblue;
+                }
+                .pressed {
+                    background-color:lightgreen;
+                }
+
+            img{
+                height: 200px;
+                margin: 10px;
+            }
 
             </style>
             <script>
@@ -17,8 +37,11 @@
                    y = parseInt(document.getElementById("txtY").value);
                    z = x + y;
                    document.getElementById("txtZ").value = z;
-                   document.getElementById("buttonPlus").style.backgroundColor = "blue";
-                   document.getElementById("buttonMinus").style.backgroundColor = "";
+                //    document.getElementById("buttonPlus").className = "pressed";
+                //    document.getElementById("buttonMinus").className = "";
+                   document.getElementById("buttonPlus").classList.add("pressed");
+                   document.getElementById("buttonMinus").classList.remove("pressed");
+
                 }
                 function minus(){
                    var x,y,z;
@@ -26,8 +49,8 @@
                    y = parseInt(document.getElementById("txtY").value);
                    z = x - y;
                    document.getElementById("txtZ").value = z;
-                   document.getElementById("buttonMinus").style.backgroundColor = "blue";
-                   document.getElementById("buttonPlus").style.backgroundColor = "";
+                   document.getElementById("buttonMinus").classList.add("pressed");
+                   document.getElementById("buttonPlus").classList.remove("pressed");
                 }
                 
 
@@ -36,11 +59,18 @@
     <body>
         <!-- Тут можно написать комментарий-->
         <h1>Calculator</h1>
-        <p>This is unique calculator. Try it!</p>
-        <input id="txtX"/> <br /> 
-        <input id="txtY"/> <br /> 
-        <button id="buttonPlus" onclick="plus();">+</button> <br />
-        <button id="buttonMinus" onclick="minus();">-</button> <br />
-        <input id="txtZ"/>
+        <div>This is unique calculator. Try it!</div>
+        <div class="calculator">
+            <input id="txtX" placeholder="Input 1 number"/> 
+            <input id="txtY" placeholder="Input 2 number"/>
+            <div class="button">
+                <button id="buttonPlus" onclick="plus();">+</button> 
+                <button id="buttonMinus" onclick="minus();">-</button> 
+            </div>
+            <input id="txtZ" placeholder="Result"/>
+        </div>
+
+        <img src="images/morning.jpg">
+
     </body>
 </html>
