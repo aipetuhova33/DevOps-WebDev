@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Calculator</title>
+            <style>
+                input, button {
+                    /*  Тут можно написать комментарий */
+                    width: 160px;
+                    margin: 10px;
+                    text-align: center;
+                }
+
+            </style>
+            <script>
+                function plus(){
+                   var x,y,z;
+                   x = parseInt(document.getElementById("txtX").value);
+                   y = parseInt(document.getElementById("txtY").value);
+                   z = x + y;
+                   document.getElementById("txtZ").value = z;
+                   document.getElementById("buttonPlus").style.backgroundColor = "blue";
+                }
+                function minus(){
+                   var x,y,z;
+                   x = parseInt(document.getElementById("txtX").value);
+                   y = parseInt(document.getElementById("txtY").value);
+                   z = x - y;
+                   document.getElementById("txtZ").value = z;
+                   document.getElementById("buttonMinus").style.backgroundColor = "blue";
+                }
+                
+
+            </script>
+    </head>
+    <body>
+        <!-- Тут можно написать комментарий-->
+        <h1>Calculator</h1>
+        <p>This is unique calculator. Try it!</p>
+        <input id="txtX"/> <br /> 
+        <input id="txtY"/> <br /> 
+        <button id="buttonPlus" onclick="plus();">+</button> <br />
+        <button id="buttonMinus" onclick="minus();">-</button> <br />
+        <input id="txtZ"/>
+    </body>
+</html>
