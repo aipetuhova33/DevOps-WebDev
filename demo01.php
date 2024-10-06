@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if (!isset($_SESSION["user"])) {
+		echo('<meta http-equiv="refresh" content="3; URL=login.html">');
+        die("You need login to open this page! Вы будете перенеправлены");
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,8 +53,8 @@
         // $z = $x + $y;
         // echo "$x + $y = $z";
 
-        //date_default_timezone_set("Europe/Moscow");
-        date_default_timezone_set("America/Cuiaba");
+        date_default_timezone_set("Europe/Moscow");
+        //date_default_timezone_set("America/Cuiaba");
         //date_default_timezone_set("Asia/Singapore");
         //date_default_timezone_set("America/Adak");
 
