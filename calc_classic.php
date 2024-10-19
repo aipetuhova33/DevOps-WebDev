@@ -42,7 +42,7 @@
     </head>
     <body>
         <h1>Calculator</h1>
-        <div>This is unique calculator. Try it!</div>
+        <div>This is unique CLASSIC calculator. Try it!</div>
         <?php
          
          if(isset($_REQUEST["txtX"])) {
@@ -61,6 +61,7 @@
                 $z = $x * $y;
                 $operation = "multiplication";
             }
+            // -- Результат для деления сохраняется не корректно из-за типа данных поля БД Result --
             if(isset($_REQUEST["division"])) {
                 if($y != 0) {
                     $z = $x / $y;
@@ -98,6 +99,7 @@
                     <button name="plus">+</button> 
                     <button name="minus">-</button>
                     <button name="multiplication">*</button>
+                    <!-- Результат для деления сохраняется не корректно из-за типа данных поля БД Result -->
                     <button name="division">/</button>  
                 </div>
                 <input name="txtZ" placeholder="Result" value="<?=$z?>"/>
