@@ -104,8 +104,10 @@
                 </div>
                 <input name="txtZ" placeholder="Result" value="<?=$z?>"/>
             </form>
-            
         </div>
+        <textarea>
+            
+        </textarea>
 
     </body>
 </html>
