@@ -97,6 +97,7 @@
     </head>
     <body>
         <h1>Calculator with AJAX</h1>
+        <a href="home_.html">Вернуться на Главную</a> <br /><br />
         <div>This is unique MODERN calculator with AJAX. Try it!</div>
 
         <div class="calculator">
