@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Красоты CSS3</title>
+    <style>
+        div {
+            width: 140px;
+            height: 140px;
+            border: thin solid black;
+            margin: 10px;
+            display: inline-block;
+            border-radius: 10px;
+        }
+        /* блок 1 */
+        #div1 {
+            background: linear-gradient(45deg, rgb(191, 191, 255), white);
+            transform: skewX(20deg);
+        }
+        /* блок 2 */
+        #div2 {
+            width: 70px;
+            height: 70px;
+            vertical-align: top;
+            border-radius: 50%;
+        }
+        /* блок 3 */
+        #div3 {
+            background: linear-gradient(45deg, blue, rgb(255, 133, 133));
+            vertical-align: top;
+            transition-property: transform;
+            transition-duration: 2s;
+        }
+        #div3.clicked {
+            transform: rotate(360deg);
+        }
+        #div3 span{
+            color: aliceblue;
+        }
+
+        #div3 span.hoho{
+            color: rgb(74, 255, 171);
+        }
+
+        /* Наведение */
+        div:hover {
+            border: red thick solid;
+        }
+
+        #div2:hover {
+            cursor: pointer;
+        }
+
+        #div4 {
+            transform: translateX(50px) rotate(30deg);
+            transition-property: transform;
+            transition-duration: 2s;
+        }
+
+        #div4:hover {
+            transform: translateX(50px) rotate(450deg);
+        }
+
+    </style>
+    <script>
+        function turn() {
+            if (document.getElementById("div3").className == "clicked")
+                document.getElementById("div3").className = "";
+            else
+                document.getElementById("div3").className = "clicked";
+        }
+    </script>
+</head>
+<body>
+    <h1>Красоты CSS3</h1>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3" onclick="turn();">
+        <span>Лялялялялялялял</span>
+        <span class="hoho">Бубубубубубубуб</span>
+    </div>
+    <div id="div4"></div>
+</body>
+</html>
